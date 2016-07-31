@@ -1,6 +1,8 @@
 const state = (function () {
   return {
-    frags: []
+    frags: [],
+    audio: true,
+    overlay: false
   }
 }())
 
