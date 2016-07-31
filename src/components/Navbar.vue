@@ -7,37 +7,39 @@
     <div class="container">
       <div id="navbar" class="navbar-collapse collapse  ">
         <ul class="nav navbar-nav">
-
+          <a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a v-link="'/projects'">projets</a></li>
+          <li><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
           <li>
             <a href="https://vine.co/u/1371198183925043200?mode=tv" target="_blank">
               <img class="social-ico" src="./../assets/ico-vine.svg">
             </a>
           </li>
-          <li><a href=""><img class="social-ico" src="./../assets/ico-instagram.svg"></a></li>
+          <!-- <li><a href=""><img class="social-ico" src="./../assets/ico-instagram.svg"></a></li> -->
           <li><a href=""><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
 
-          <li><a v-link="'/projects'">projets</a></li>
-          <li><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
 
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a>
-        </ul>
       </div>
-    <h1>
-      C'est une maison bleue
-      Adossée à la colline
-      On y vient à pied, on ne frappe pas
-      Ceux qui vivent là, ont jeté la clé
-      On se retrouve ensemble
-      Après des années de route
-      Et l'on vient s'asseoir autour du repas
-      Tout le monde est là, à cinq heures du soir
-      San Francisco s'embrume
-      Quand San Francisco s'allume
-      San Francisco, où êtes vous
-      Lizard et Luc, Psylvia, attendez moi
-    </h1>
+      <div class="container">
+        <h1>
+          C'est une maison bleue
+          Adossée à la colline
+          On y vient à pied, on ne frappe pas
+          Ceux qui vivent là, ont jeté la clé
+          On se retrouve ensemble
+          Après des années de route
+          Et l'on vient s'asseoir autour du repas
+          Tout le monde est là, à cinq heures du soir
+          San Francisco s'embrume
+          Quand San Francisco s'allume
+          San Francisco, où êtes vous
+          Lizard et Luc, Psylvia, attendez moi
+        </h1>
+      </div>
+
     </div>
   </nav>
 </template>
@@ -63,24 +65,26 @@ export default {
    cursor: pointer;
 }
 nav.navbar {
-  height: 160vh;
-  bottom: -120vh;
+  height: 120vh;
+  bottom: calc(-80vh + 70px);
 
-  transition: bottom .8s ease-in-out;
+  transition: bottom .4s ease-in-out;
 
   border:none;
-  background: linear-gradient(-180deg, rgba(255,255,255,0) 0, rgba(0,0,0,255) 40vh);
+  background: linear-gradient(-180deg, rgba(255,255,255,0) 5vh, rgba(0,0,0,255) 45vh);
+  /*background-color: gold;*/
   pointer-events: none;
 
 }
 
 nav.navbar.isOverlay {
-  bottom: -45vh;
+  bottom: 0;
 }
 
 #navbar {
-  margin-top: calc(20vh + 150px);
+  margin-top: calc(40vh);
   pointer-events: auto;
+  height: 70px;
 }
 
 .social-ico {
@@ -107,6 +111,11 @@ nav.navbar.isOverlay {
 .logo {
   /*margin-bottom: 25px;*/
   margin-top: -50px;
+  /*margin-left: 3vw;*/
+}
+.navbar-right {
+  /*margin-right: 3vw;*/
+
 }
 h1 {
   /* C'est une maison ble: */

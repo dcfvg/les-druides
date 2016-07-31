@@ -1,5 +1,5 @@
 <template>
-  <div class="vines container-fluid">
+  <div class="vines">
     <div id="vines">
       <div v-for="frag in featured">
         <div class="vine">
@@ -44,6 +44,8 @@ export default {
   .vines {
     padding-bottom: 500px;
     padding-left: 0;
+
+  margin-left: 64px;
   }
 
   .vine {
@@ -89,14 +91,15 @@ export default {
     text-align: center;
     padding-top: 150px;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity .4s ease-in-out;
     /* Rectangle 4: */
-    background: #50E3C2;
-    background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 27%, #000000 100%);
+    /*background: #50E3C2;*/
+
+    color:white;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 40%, #000000 100%);
   }
 
   .vine-hover a:hover {
-    color:white;
     opacity: 1;
   }
 

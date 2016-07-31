@@ -1,15 +1,19 @@
 <template>
   <div class="container">
-
-  <div class="row infos">
-      <h1 class="col-sm-12">{{projMain.title}}</h1>
-      <p  class="col-sm-offset-2 col-sm-2">{{projMain.genre}}, {{projMain.date}}</p>
-      <p  class="col-sm-4">{{projMain.pitch}}</p>
-      <p  class="col-sm-4 link"><a :href="projMain.url">{{projMain.url}}</a></p>
-  </div>
     <div v-for="frag in projfrags" class="row fragline">
 
-      <div class="col-sm-2">
+
+      <div class="row video" v-if="frag.vimeo !== ''">
+        <div class="embed-responsive embed-responsive-16by9 col-sm-12" >
+            <iframe
+              class="embed-responsive-item"
+              :src="'https://player.vimeo.com/video/'+frag.vimeo+'?title=0&byline=0&portrait=0'"
+              frameborder="0"
+              webkitallowfullscreen mozallowfullscreen allowfullscreen>
+            </iframe>
+        </div>
+
+        <h1 class="col-sm-4">{{frag.title}}
         <div class="vine" v-if="frag.vine !== ''">
           <iframe
             class="vine-embed"
@@ -19,18 +23,12 @@
             frameborder="0">
           </iframe>
         </div>
+        </h1>
+        <p  class="col-sm-2">{{frag.genre}}, {{frag.date}}</p>
+        <p  class="col-sm-4">{{frag.pitch}}</p>
+
       </div>
 
-      <div class="col-sm-10">
-        <div class="vimeo embed-responsive embed-responsive-16by9 " v-if="frag.vimeo !== ''">
-            <iframe
-              class="embed-responsive-item"
-              :src="'https://player.vimeo.com/video/'+frag.vimeo+'?title=0&byline=0&portrait=0'"
-              frameborder="0"
-              webkitallowfullscreen mozallowfullscreen allowfullscreen>
-            </iframe>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -55,16 +53,27 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.vimeo {
+.container {
+  margin-left: 64px;
+}
+h1 {
+  text-align: center;
+}
+.embed-responsive {
   background: linear-gradient(-180deg, rgba(0,0,0,255) 0, rgba(255,255,255,0) 100%);
-  border:solid black 5vw;
-  border-top:solid black 15vh;
-  border-bottom:solid black 15vh;
+
+  border-bottom:solid black 10vh;
 }
-.infos {
-  /*color: white;*/
+
+.video {
+
+  color: #50E3C2;
+  background-color: black;
+
+  padding: 5vh;
+
 }
+
 .fragline {
     /*background: linear-gradient(-180deg, rgba(0,0,0,255) 0, rgba(255,255,255,0) 50%);*/
     padding-bottom: 32px
