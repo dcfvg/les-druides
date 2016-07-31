@@ -1,5 +1,5 @@
 <template>
-  <div class="vines">
+  <div class="vines container-fluid">
     <div id="vines">
       <div v-for="frag in published">
         <div class="vine">
@@ -39,6 +39,7 @@ export default {
 
 .vines {
   padding-bottom: 500px;
+  padding-left: 0;
 }
 .vine {
   float: left;

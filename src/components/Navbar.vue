@@ -15,12 +15,12 @@
           <li><a href=""><img class="social-ico" src="./../assets/ico-instagram.svg"></a></li>
           <li><a href=""><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
 
-          <li><a v-link="{ path: '/vines' }">projets</a></li>
+          <li><a v-link="'/vines'">projets</a></li>
           <li><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <a v-link="{ path: '/' }"><img class="logo" src="./../assets/logo-seul.png"></a>
+          <a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a>
         </ul>
       </div><!--/.nav-collapse -->
     <h1>C'est une maison bleue
