@@ -9,14 +9,16 @@
 import state from './state.js'
 import Tabletop from 'Tabletop'
 import Navbar from './components/Navbar'
+import _ from 'lodash'
 
 export default {
   components: {Navbar},
   created: function () {
     Tabletop.init({ key: '1b_v94YxgbjByIwqyjiv5jTupN_wlSN4HeBflVmXqq0U',
     callback: function (data, tabletop) {
-      state.frags = data
-      console.log(state)
+      state.frags = _.sortBy(data, function (d) {
+        return -d.date
+      })
     },
     simpleSheet: true })
   }

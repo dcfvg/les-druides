@@ -7,6 +7,7 @@
     <div class="container">
       <div id="navbar" class="navbar-collapse collapse  ">
         <ul class="nav navbar-nav">
+
           <li>
             <a href="https://vine.co/u/1371198183925043200?mode=tv" target="_blank">
               <img class="social-ico" src="./../assets/ico-vine.svg">
@@ -15,28 +16,28 @@
           <li><a href=""><img class="social-ico" src="./../assets/ico-instagram.svg"></a></li>
           <li><a href=""><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
 
-          <li><a v-link="'/vines'">projets</a></li>
+          <li><a v-link="'/projects'">projets</a></li>
           <li><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a>
         </ul>
-      </div><!--/.nav-collapse -->
-    <h1>C'est une maison bleue
-
-Adossée à la colline
-On y vient à pied, on ne frappe pas
-Ceux qui vivent là, ont jeté la clé
-On se retrouve ensemble
-Après des années de route
-Et l'on vient s'asseoir autour du repas
-Tout le monde est là, à cinq heures du soir
-San Francisco s'embrume
-Quand San Francisco s'allume
-San Francisco, où êtes vous
-Lizard et Luc, Psylvia, attendez moi
-</h1>
+      </div>
+    <h1>
+      C'est une maison bleue
+      Adossée à la colline
+      On y vient à pied, on ne frappe pas
+      Ceux qui vivent là, ont jeté la clé
+      On se retrouve ensemble
+      Après des années de route
+      Et l'on vient s'asseoir autour du repas
+      Tout le monde est là, à cinq heures du soir
+      San Francisco s'embrume
+      Quand San Francisco s'allume
+      San Francisco, où êtes vous
+      Lizard et Luc, Psylvia, attendez moi
+    </h1>
     </div>
   </nav>
 </template>
