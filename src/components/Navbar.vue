@@ -59,6 +59,7 @@ export default {
 
 .btn-overlay {
   display: block;
+   cursor: pointer;
 }
 nav.navbar {
   height: 160vh;
@@ -104,7 +105,7 @@ nav.navbar.isOverlay {
 
 .logo {
   /*margin-bottom: 25px;*/
-  margin-top: -90px;
+  margin-top: -50px;
 }
 h1 {
   /* C'est une maison ble: */

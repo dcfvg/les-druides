@@ -43,6 +43,7 @@ export default {
 
 body {
   background-color: #50E3C2;
+  padding-bottom: 50vh;
 }
 
 </style>
