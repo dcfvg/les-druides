@@ -27,7 +27,7 @@
 <style>
 
   @font-face {
-    font-family: 'les-druides';
+    font-family: 'druides';
     src: url('./assets/fonts/hinted-les_druides_Regular.eot');
     src: url('./assets/fonts/hinted-les_druides_Regular.eot?#iefix') format('embedded-opentype'),
       url('./assets/fonts/hinted-les_druides_Regular.woff2') format('woff2'),
@@ -39,7 +39,7 @@
   }
 
   #app {
-    font-family: 'les-druides';
+    font-family: 'druides';
   }
 
   body {
