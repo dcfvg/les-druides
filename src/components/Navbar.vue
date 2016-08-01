@@ -61,7 +61,7 @@ export default {
   nav.navbar {
     height: 120vh;
 
-    bottom: calc(-80vh + 70px);
+    bottom: calc(-80vh + 50px);
     transition: bottom .4s ease-in-out;
 
     border:none;
@@ -77,7 +77,7 @@ export default {
   #navbar {
     margin-top: calc(40vh);
     pointer-events: auto;
-    height: 70px;
+    height: 50px;
   }
 
   .social-ico {
@@ -100,7 +100,8 @@ export default {
   }
 
   .logo {
-    margin-top: -50px;
+    margin-top: -35px;
+    height: 64px;
   }
 
   h1 {

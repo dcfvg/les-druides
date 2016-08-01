@@ -3,6 +3,7 @@ var config = require('../config')
 var utils = require('./utils')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var baseWebpackConfig = require('./webpack.base.conf')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -27,6 +28,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     })
   },
   plugins: [
+
+    new CopyWebpackPlugin([{ from: 'CNAME' }] ),
+
     // http://vuejs.github.io/vue-loader/workflow/production.html
     new webpack.DefinePlugin({
       'process.env': env

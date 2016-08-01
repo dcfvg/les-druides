@@ -84,7 +84,7 @@
   .video {
     color: #50E3C2;
     background-color: black;
-    padding: 64px;
+    padding: 64px 96px 96px 96px;
 
   }
 
