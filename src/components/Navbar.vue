@@ -81,7 +81,7 @@ export default {
   }
 
   .social-ico {
-    height: 32px;
+    height: 17px;
     top:-4px;
     position: relative;
     transition: top .2s ease-in-out;
@@ -94,19 +94,22 @@ export default {
 
   }
   .navbar a {
-    font-size: 18px;
     color: #50E3C2 !important;
     letter-spacing: 0px;
   }
 
   .logo {
     margin-top: -35px;
-    height: 64px;
+    height: 48px;
+    transition: height .2s ease-in-out;
   }
 
+  nav.navbar.isOverlay .logo {
+    height: 90px;
+  }
   h1 {
 
-    font-size: 26px;
+    font-size: 24px;
     color: #50E3C2;
     letter-spacing: 0.8px;
     line-height: 45px;

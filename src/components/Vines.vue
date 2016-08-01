@@ -6,8 +6,8 @@
           <iframe
             class="vine-embed"
             :src="'https://vine.co/v/'+frag.vine+'/embed/simple?audio='+(state.audio ? '1' : '0')"
-            width="300"
-            height="300"
+            width="200"
+            height="200"
             frameborder="0">
           </iframe>
           <div class="vine-hover">
@@ -43,20 +43,19 @@ export default {
 
   .vines {
     padding-bottom: 500px;
-    padding-left: 0;
-    margin-left: 32px;
+    /*padding-left: 0;*/
   }
 
   .vine {
     float: left;
-    height: 300px;
+    height: 200px;
     background: linear-gradient(-180deg, rgba(0,0,0,255) 0, rgba(255,255,255,0) 100%);
   }
 
   .title {
     color: white;
 
-    font-size: 26px;
+    font-size: 18px;
     color: #FFFFFF;
     letter-spacing: 1.6px;
 
@@ -65,7 +64,7 @@ export default {
     padding: 8px;
   }
   .genre {
-    font-size: 14px;
+    font-size: 12px;
     color: #50E3C2;
     letter-spacing: 1px;
     position: absolute;
@@ -80,12 +79,12 @@ export default {
     text-decoration: none;
     margin: 0;
     padding: 0;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     position: relative;
-    bottom: 304px;
+    bottom: 204px;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 75px;
     opacity: 0;
     transition: opacity .4s ease-in-out;
 
