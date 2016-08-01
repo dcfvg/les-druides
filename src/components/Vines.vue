@@ -14,7 +14,7 @@
             <a v-link="'/project/'+frag.id">
 
               <span class="title">{{frag.title}}</span>
-              <span class="genre">{{frag.genre}}</span>
+              <span class="genre">{{frag.genre}} <br> {{frag.date}}</span>
 
             </a>
           </div>
@@ -44,8 +44,7 @@ export default {
   .vines {
     padding-bottom: 500px;
     padding-left: 0;
-
-  margin-left: 64px;
+    margin-left: 32px;
   }
 
   .vine {
@@ -56,7 +55,7 @@ export default {
 
   .title {
     color: white;
-    /* title */
+
     font-family: les_druides_Regular;
     font-size: 26px;
     color: #FFFFFF;
@@ -64,9 +63,10 @@ export default {
 
     display: block;
     width: 100%;
+    padding: 8px;
   }
   .genre {
-    /* genre: */
+
     font-family: les_druides_Regular;
     font-size: 14px;
     color: #50E3C2;

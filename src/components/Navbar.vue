@@ -1,35 +1,26 @@
 <template>
-  <nav
-    v-bind:class="{ 'isOverlay': state.overlay}"
-    class="navbar navbar-default navbar-fixed-bottom"
-  >
-
+  <nav v-bind:class="{ 'isOverlay': state.overlay}" class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
+
       <div id="navbar" class="navbar-collapse collapse  ">
         <ul class="nav navbar-nav">
-          <a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a>
+          <li><a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a v-link="'/projects'">projets</a></li>
-          <li><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
-          <li>
-            <a href="https://vine.co/u/1371198183925043200?mode=tv" target="_blank">
-              <img class="social-ico" src="./../assets/ico-vine.svg">
-            </a>
-          </li>
-          <!-- <li><a href=""><img class="social-ico" src="./../assets/ico-instagram.svg"></a></li> -->
+          <li v-if="!state.overlay"><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
+          <li v-if="state.overlay"><a v-on:click="toogleOverlay" class="btn-overlay-close" ><img src="./../assets/ico-close.svg"></a></li>
+
+          <li><a href="https://vine.co/u/1371198183925043200?mode=tv" target="_blank"><img class="social-ico" src="./../assets/ico-vine.svg"></a></li>
+
           <li><a href=""><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
-
-
         </ul>
       </div>
-      <div class="container">
-        <h1 class="about">
-        {{about.text}}
-        </h1>
-      </div>
 
+      <div class="container">
+        <h1 class="about"  v-if="about">{{about.text}}</h1>
+      </div>
     </div>
+
   </nav>
 </template>
 
@@ -58,6 +49,14 @@ export default {
   .btn-overlay {
     display: block;
      cursor: pointer;
+  }
+
+  .btn-overlay-close {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    bottom: 3px;
+    right: 5px
   }
   nav.navbar {
     height: 120vh;
