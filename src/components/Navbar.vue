@@ -60,13 +60,12 @@ export default {
   }
   nav.navbar {
     height: 120vh;
-    bottom: calc(-80vh + 70px);
 
+    bottom: calc(-80vh + 70px);
     transition: bottom .4s ease-in-out;
 
     border:none;
     background: linear-gradient(-180deg, rgba(255,255,255,0) 5vh, rgba(0,0,0,255) 45vh);
-    /*background-color: gold;*/
     pointer-events: none;
 
   }
@@ -95,25 +94,17 @@ export default {
 
   }
   .navbar a {
-    /* [vine][vimeo][insta]: */
-    font-family: les_druides_Regular;
     font-size: 18px;
     color: #50E3C2 !important;
     letter-spacing: 0px;
   }
 
   .logo {
-    /*margin-bottom: 25px;*/
     margin-top: -50px;
-    /*margin-left: 3vw;*/
   }
-  .navbar-right {
-    /*margin-right: 3vw;*/
 
-  }
   h1 {
-    /* C'est une maison ble: */
-    font-family: les_druides_Regular;
+
     font-size: 26px;
     color: #50E3C2;
     letter-spacing: 0.8px;

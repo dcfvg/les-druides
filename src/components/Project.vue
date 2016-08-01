@@ -54,8 +54,7 @@
 
   h1 {
     text-align: center;
-    /* Type something, a lo: */
-    font-family: les_druides_Regular;
+
     font-size: 26px;
     color: #FFFFFF;
     letter-spacing: 1.6px;
@@ -63,7 +62,7 @@
   }
 
   .type {
-    font-family: les_druides_Regular;
+
     font-size: 14px;
     color: #50E3C2;
     letter-spacing: 1px;

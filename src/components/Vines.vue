@@ -56,7 +56,6 @@ export default {
   .title {
     color: white;
 
-    font-family: les_druides_Regular;
     font-size: 26px;
     color: #FFFFFF;
     letter-spacing: 1.6px;
@@ -66,8 +65,6 @@ export default {
     padding: 8px;
   }
   .genre {
-
-    font-family: les_druides_Regular;
     font-size: 14px;
     color: #50E3C2;
     letter-spacing: 1px;
@@ -77,7 +74,6 @@ export default {
     display: block;
     width: 100%;
   }
-
 
   .vine-hover a {
     display: block;
@@ -92,8 +88,6 @@ export default {
     padding-top: 150px;
     opacity: 0;
     transition: opacity .4s ease-in-out;
-    /* Rectangle 4: */
-    /*background: #50E3C2;*/
 
     color:white;
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.00) 40%, #000000 100%);
