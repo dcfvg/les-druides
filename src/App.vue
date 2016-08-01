@@ -15,12 +15,11 @@ export default {
   components: {Navbar},
   created: function () {
     Tabletop.init({ key: '1b_v94YxgbjByIwqyjiv5jTupN_wlSN4HeBflVmXqq0U',
-    callback: function (data, tabletop) {
-      state.frags = _.sortBy(data, function (d) {
-        return -d.date
-      })
-    },
-    simpleSheet: true })
+      callback: function (data, tabletop) {
+        state.frags = _.sortBy(data.medias.elements, function (d) { return -d.date })
+        state.txts = data.txt.elements
+      }
+    })
   }
 }
 </script>

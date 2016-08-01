@@ -2,7 +2,8 @@ const state = (function () {
   return {
     frags: [],
     audio: false,
-    overlay: false
+    overlay: false,
+    txts: []
   }
 }())
 
