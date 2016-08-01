@@ -4,11 +4,14 @@
 
       <div id="navbar" class="navbar-collapse collapse  ">
         <ul class="nav navbar-nav">
-          <li><a v-link="'/'"><img class="logo" src="./../assets/logo-seul.png"></a></li>
+          <li><a v-link="'/projects'"><img class="logo" src="./../assets/logo-seul.png"></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li v-if="!state.overlay"><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
+
           <li v-if="state.overlay"><a v-on:click="toogleOverlay" class="btn-overlay-close" ><img src="./../assets/ico-close.svg"></a></li>
+
+          <li><a v-link="'/projects'">fragments</a></li>
 
           <li><a href="https://vine.co/u/1371198183925043200?mode=tv" target="_blank"><img class="social-ico" src="./../assets/ico-vine.svg"></a></li>
 
@@ -46,6 +49,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.v-link-active {
+  /*background-color: gold;*/
+  background-image: radial-gradient(30% 10% at 50% 85%, #50E3C2 0%, rgba(80,226,193,0.00) 100%);
+}
   .btn-overlay {
     display: block;
      cursor: pointer;
@@ -56,7 +63,10 @@ export default {
     cursor: pointer;
     position: relative;
     bottom: 3px;
-    right: 5px
+  }
+
+  .btn-overlay-close img{
+    height: 17px;
   }
   nav.navbar {
     height: 120vh;
@@ -82,7 +92,7 @@ export default {
 
   .social-ico {
     height: 17px;
-    top:-4px;
+    top:-2px;
     position: relative;
     transition: top .2s ease-in-out;
 
@@ -109,10 +119,10 @@ export default {
   }
   h1 {
 
-    font-size: 24px;
+    font-size: 18px;
     color: #50E3C2;
     letter-spacing: 0.8px;
-    line-height: 45px;
+    line-height: 30px;
 
     text-align: center;
 
