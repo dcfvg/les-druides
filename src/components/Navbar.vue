@@ -1,6 +1,6 @@
 <template>
   <nav v-bind:class="{ 'isOverlay': state.overlay}" class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
+    <div class="container" v-if="texts">
 
       <div id="navbar" class="navbar-collapse collapse  ">
         <ul class="nav navbar-nav">
@@ -13,16 +13,15 @@
           <li v-if="state.overlay"><a v-on:click="toogleOverlay" class="btn-overlay-close" ><img src="./../assets/ico-close.svg"></a></li>
 
           <li><a v-link="'/projects'">fragments</a></li>
+          <li ><a :href="texts.vinepage.text" target="_blank"><img class="social-ico" src="./../assets/ico-vine.svg"></a></li>
 
-          <li><a href="https://vine.co/u/1371198183925043200?mode=tv" target="_blank"><img class="social-ico" src="./../assets/ico-vine.svg"></a></li>
-
-          <li><a href=""><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
+          <li ><a :href="texts.vimeopage.text"><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
         </ul>
 
       </div>
 
       <div class="container">
-        <h1 class="about"  v-if="about">{{about.text}}</h1>
+        <h1 class="about" >{{texts.about.text}}</h1>
       </div>
 
     </div>
@@ -36,8 +35,8 @@ import _ from 'lodash'
 export default {
   data: function () { return {state: state} },
   computed: {
-    about: function () {
-      return _(this.state.txts).filter(['key', 'about']).first()
+    texts: function () {
+      return _.keyBy(this.state.txts, 'key')
     }
   },
   methods: {

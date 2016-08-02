@@ -32,8 +32,22 @@ export default {
     float: left;
     height: 200px;
     background: linear-gradient(-180deg, rgba(0,0,0,255) 0, rgba(255,255,255,0) 100%);
+
+    animation: fadein 2s;
   }
 
+  @keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+
+  .vine-embed {
+    animation: fadein 4s;
+  }
   .title {
     color: white;
 
@@ -78,6 +92,8 @@ export default {
   .vine-hover a:hover {
     opacity: 1;
   }
+
+
 
 
 </style>
