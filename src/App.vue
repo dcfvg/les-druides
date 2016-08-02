@@ -26,6 +26,14 @@
 
 <style>
 
+*::selection {
+  background: #50E3C2; /* WebKit/Blink Browsers */
+}
+
+  .v-link-active {
+    background-image: radial-gradient(30% 10% at 50% 85%, #50E3C2 0%, rgba(80,226,193,0.00) 100%);
+  }
+
   @font-face {
     font-family: 'druides';
     src: url('./assets/fonts/hinted-les_druides_Regular.eot');
@@ -38,6 +46,7 @@
     font-style: normal;
   }
 
+
   #app {
     font-family: 'druides';
   }
@@ -45,6 +54,7 @@
   body {
     background-color: #50E3C2;
     padding-bottom: 40vh;
+    overflow-x: hidden;
   }
 
 </style>

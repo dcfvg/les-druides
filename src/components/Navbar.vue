@@ -6,6 +6,7 @@
         <ul class="nav navbar-nav">
           <li><a v-link="'/projects'"><img class="logo" src="./../assets/logo-seul.png"></a></li>
         </ul>
+
         <ul class="nav navbar-nav navbar-right">
           <li v-if="!state.overlay"><a v-on:click="toogleOverlay" class="btn-overlay" >infos</a></li>
 
@@ -17,13 +18,14 @@
 
           <li><a href=""><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
         </ul>
+
       </div>
 
       <div class="container">
         <h1 class="about"  v-if="about">{{about.text}}</h1>
       </div>
-    </div>
 
+    </div>
   </nav>
 </template>
 
@@ -49,10 +51,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.v-link-active {
-  /*background-color: gold;*/
-  background-image: radial-gradient(30% 10% at 50% 85%, #50E3C2 0%, rgba(80,226,193,0.00) 100%);
-}
   .btn-overlay {
     display: block;
      cursor: pointer;
@@ -68,6 +66,7 @@ export default {
   .btn-overlay-close img{
     height: 17px;
   }
+
   nav.navbar {
     height: 120vh;
 
@@ -77,7 +76,6 @@ export default {
     border:none;
     background: linear-gradient(-180deg, rgba(255,255,255,0) 5vh, rgba(0,0,0,255) 45vh);
     pointer-events: none;
-
   }
 
   nav.navbar.isOverlay {
@@ -97,12 +95,12 @@ export default {
     transition: top .2s ease-in-out;
 
   }
-  .social-ico:hover {
 
+  .social-ico:hover {
     position: relative;
     top:-12px;
-
   }
+
   .navbar a {
     color: #50E3C2 !important;
     letter-spacing: 0px;
@@ -117,16 +115,15 @@ export default {
   nav.navbar.isOverlay .logo {
     height: 90px;
   }
-  h1 {
 
+  h1 {
     font-size: 18px;
     color: #50E3C2;
     letter-spacing: 0.8px;
     line-height: 30px;
-
     text-align: center;
-
   }
+
 </style>
 
 
