@@ -1,6 +1,6 @@
 <template>
   <nav v-bind:class="{ 'isOverlay': state.overlay}" class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container" v-if="texts">
+    <div class="container" v-if="'texts.length > 0'">
 
       <div id="navbar" class="navbar-collapse collapse  ">
         <ul class="nav navbar-nav">
@@ -21,7 +21,8 @@
       </div>
 
       <div class="container">
-        <h1 class="about" >{{texts.about.text}}</h1>
+        <h1 class="about col-sm-offset-1 col-sm-10" >{{{texts.manifesto.text}}}</h1>
+        <p class="about col-sm-12" >{{texts.infos.text}}</p>
       </div>
 
     </div>
@@ -122,7 +123,10 @@ export default {
     line-height: 30px;
     text-align: center;
   }
-
+  p.about {
+    text-align: center;
+    color: white;
+  }
 </style>
 
 
