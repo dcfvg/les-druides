@@ -15,7 +15,10 @@
           <li><a v-link="'/projects'">fragments</a></li>
           <li ><a :href="texts.vinepage.text" target="_blank"><img class="social-ico" src="./../assets/ico-vine.svg"></a></li>
 
-          <li ><a :href="texts.vimeopage.text"><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
+
+          <li ><a :href="texts.instagrampage.text" target="_blank"><img class="social-ico" src="./../assets/ico-instagram.svg"></a></li>
+
+          <li ><a :href="texts.vimeopage.text" target="_blank"><img class="social-ico" src="./../assets/ico-vimeo.svg"></a></li>
         </ul>
 
       </div>
